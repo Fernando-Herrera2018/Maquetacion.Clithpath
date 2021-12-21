@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #E74F3F;
+    --background-color: #F7F4EC;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+    body {
+    font-family: helvetica;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    background-color: var(--background-color);
+  }
+  h2 {
+    font-size: 24px;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+  }
+  figure {
+    height: 100%;
+  }
+   figure img {
+    width: 100%;
+    height: 100%;
+  }
+ .section_width {
+    max-width: 1600px;
+    margin: auto;
+  }
+ .main_container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+ .line {
+    color: white;
+    border: 2px white solid;
+    max-width: 100px;
+  }
+.btn {
+    font-weight: bold;
+    border: 2px white solid;
+    padding: 20px 30px;
+    border-radius: 2%;
+    max-width: 170px;
+  }
+.btn:hover {
+    color: var(--primary-color);
+    background-color: white;
+  }
+.article_info {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
+  }
+ .image_class figure {
+    overflow: hidden;
+  }
+.image_class figure img {
+    transform: scale(1);
+    transition: all .5s;
+  }
+.article_info:hover figure img {
+    transform: scale(1.1);
+  }
+.info {
+    max-width: 400px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+  }
+.info p {
+    max-width: 340px;
+  }
+.text_info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+.triangle {
+    background-color: var(--primary-color);
+    width: 35px;
+    height: 35px;
+    clip-path: polygon(0 47%, 100% 100%, 100% 0);
+    position: absolute;
+    top: 50%;
+    left: -8%;
+  }
+  @media screen and (max-width: 600px) {
+    .main_container {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+.article_info {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+.triangle {
+      width: 50px;
+      height: 50px;
+      clip-path: polygon(49% 0, 0 100%, 100% 100%);
+      top: -14%;
+      left: 50%;
+    }
+  }
